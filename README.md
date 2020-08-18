@@ -1,6 +1,6 @@
 ![Logo](https://i.imgur.com/g46r0Y0.png)
 
-# BetterBees
+# BetterTalismans
 This plugin adds "new items" known as "Talismans" to the game to boost your players.\
 The aim of this plugin is to allow players to craft talismans (if they have permission to it) and use them to gain boosts.
 
