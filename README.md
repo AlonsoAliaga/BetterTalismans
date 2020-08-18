@@ -1,4 +1,4 @@
-![Logo](notyet)
+![Logo](https://i.imgur.com/g46r0Y0.png)
 
 # BetterBees
 This plugin adds "new items" known as "Talismans" to the game to boost your players.\
