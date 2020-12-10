@@ -1,0 +1,79 @@
+
+
+Messages:
+  No-permission: "&cNo tienes permitido hacer esto"
+  Reloaded: "&aAlgunos mensajes y opciones fueron recargados, otros necesitan reinicio"
+  Invalid-player: "&cEse jugador no esta conectado actualmente"
+  No-craft-permission: "&cNo tienes permiso para craftear esto"
+  No-recipe-permission: "&cNo tienes permiso para ver este crafteo"
+  No-recipe-available: "&cNo hay crafteos disponibles"
+  Corrupted-talisman: "&cEste talisman esta corrupto, borralo inmediatamente"
+  Talismans:
+    No-permission: "&cNo tienes permiso para ver este menu"
+    Opened-for-other: "&aHas abierto el menu de talisman de {TARGET}."
+  Give:
+    Invalid-talisman: "&cEse talisman no es valido"
+    Received: "&aHas recibido '{TALISMAN}' talisman."
+    Received-extra: "&aReciviste '{TALISMAN}' talisman. Pero no tenias espacio para tenerlo en el inventario y ha caido al suelo."
+    Success: "&6Te dieron {TARGET} '{TALISMAN}' talisman."
+  Help:
+    OP:
+    - "&6 /bettertalismans test &f- &eRecive todos los talismanes (Solo operador)"
+    - "&6 /bettertalismans talismans <player> &f- &eAbrele el menu a un jugador"
+    - "&6 /bettertalismans give <player> <talisman> &f- &eGDarle un talisman a un jugador"
+    - "&6 /bettertalismans reload &f- &eConfiguracion recargada completamente"
+    Admin:
+    - "&6 /bettertalismans talismans <player> &f- &eAbrele el menu a un jugador"
+    - "&6 /bettertalismans give <player> <talisman> &f- &eGDarle un talisman a un jugador"
+    - "&6 /bettertalismans reload &f- &eConfiguracion recargada completamente"
+    User:
+    - "&6 /bettertalismans talismans &f- &eAbrir el menu de talismanes"
+
+Lore:
+  Health-boost: "&c+{AMOUNT} Vida"
+  Speed-boost: "&b+{AMOUNT}% Rapidez"
+  Armor-boost: "&f+{AMOUNT} Puntos de armadura"
+  Armor-toughness-boost: "&f+{AMOUNT} Tenacidad de armadura"
+  Luck-boost: "&a+{AMOUNT} Suerte"
+  Attack-speed-boost: "&e+{AMOUNT} Rapidez de ataque"
+  Attack-damage-boost: "&9+{AMOUNT} Daño de ataque"
+  Knockback-resistance-boost: "&7+{AMOUNT}% Resistencia de empuje"
+
+Options:
+  Debug: false
+  Hide-locked: true
+  Talismans-gui-title: "&5Tallimanes ({PAGE}/{MAX})"
+  Fill-empty: true
+
+Items:
+  Frame:
+    Color: "BLACK"
+    Custom-model-data: 0
+  Unknown-talisman:
+    Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDZiYTYzMzQ0ZjQ5ZGQxYzRmNTQ4OGU5MjZiZjNkOWUyYjI5OTE2YTZjNTBkNjEwYmI0MGE1MjczZGM4YzgyIn19fQ=="
+    Displayname: "&4&lTalisman desconocido"
+    Lore:
+    - "&7No has desbloqueado esto"
+  Previous-page:
+    Material: "ARROW"
+    Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzdhZWU5YTc1YmYwZGY3ODk3MTgzMDE1Y2NhMGIyYTdkNzU1YzYzMzg4ZmYwMTc1MmQ1ZjQ0MTlmYzY0NSJ9fX0="
+    Displayname: "&9Pagina anterior"
+    Lore:
+    - "&7Ir a la pagina anterior."
+  Next-page:
+    Material: "ARROW"
+    Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDZiYTYzMzQ0ZjQ5ZGQxYzRmNTQ4OGU5MjZiZjNkOWUyYjI5OTE2YTZjNTBkNjEwYmI0MGE1MjczZGM4YzgyIn19fQ=="
+    Displayname: "&9Next page"
+    Lore:
+    - "&7Ir a la siguiente pagina."
+
+Permissions:
+  Admin: "bettertalismans.admin"
+  Talismans: "none"
+
+Updates:
+  Auto-update-configuration: true
+  Check-updates: true
+  Notify-updates: true
+  Permission: "bettertalismans.update"
+  Message: "&5&lD&d&lP &7>> &cUna nueva version encontrada estas usando: {CURRENT}. descarga la version {NEW} aqui &c{LINK}"
