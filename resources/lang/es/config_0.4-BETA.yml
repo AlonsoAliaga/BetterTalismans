@@ -3,9 +3,10 @@
 #   | _ \/ -_)  _|  _/ -_) '_|| |/ _` | | (_-< '  \/ _` | ' \(_-<
 #   |___/\___|\__|\__\___|_|  |_|\__,_|_|_/__/_|_|_\__,_|_||_/__/
 #                           by AlonsoAliaga
-#          https://www.spigotmc.org/resources/authors/281176/
-#          Traducción al español proporcionada por Gabriel A.
-
+##################################################################################
+#                    Traducción al español por FranMC23
+#      Esta traducción es proporcionada por un miembro de la comunidad. <3
+##################################################################################
 Messages:
   No-permission: "&cNo tienes permitido hacer esto"
   Reloaded: "&aAlgunos mensajes y opciones fueron recargados, otros necesitan reinicio"
@@ -18,9 +19,9 @@ Messages:
     No-permission: "&cNo tienes permiso para ver este menu"
     Opened-for-other: "&aHas abierto el menu de talisman de {TARGET}."
   Give:
-    Invalid-talisman: "&cEse talisman no es valido"
+    Invalid-talisman: "&cEse talisman no es válido"
     Received: "&aHas recibido '{TALISMAN}' talisman."
-    Received-extra: "&aReciviste '{TALISMAN}' talisman. Pero no tenias espacio para tenerlo en el inventario y ha caido al suelo."
+    Received-extra: "&aRecibiste '{TALISMAN}' talisman. Pero no tenias espacio para tenerlo en el inventario y ha caido al suelo."
     Success: "&6Te dieron {TARGET} '{TALISMAN}' talisman."
   Help:
     OP:
@@ -44,42 +45,63 @@ Lore:
   Attack-speed-boost: "&e+{AMOUNT} Rapidez de ataque"
   Attack-damage-boost: "&9+{AMOUNT} Daño de ataque"
   Knockback-resistance-boost: "&7+{AMOUNT}% Resistencia de empuje"
+  #For 1.16.x and newer versions this is not a chance anymore, its points.
+  #Knockback-resistance-boost: "&7+{AMOUNT} Knockback Resistance"
 
 Options:
+  #Option should be enabled if developer asks you to do it.
   Debug: false
+  #Hide talismans the player doesn't have permission for?
   Hide-locked: true
+  #Talismans GUI title.
   Talismans-gui-title: "&5Tallimanes ({PAGE}/{MAX})"
+  #Fill empty slots from the last row with empty frames?
   Fill-empty: true
 
 Items:
   Frame:
+    #Basic colors apply here.
     Color: "BLACK"
+    #Custom model data in case you want. ONLY 1.14+
     Custom-model-data: 0
   Unknown-talisman:
     Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDZiYTYzMzQ0ZjQ5ZGQxYzRmNTQ4OGU5MjZiZjNkOWUyYjI5OTE2YTZjNTBkNjEwYmI0MGE1MjczZGM4YzgyIn19fQ=="
-    Displayname: "&4&lTalisman desconocido"
+    Displayname: "&4&lTalisman Desconocido"
     Lore:
     - "&7No has desbloqueado esto"
+    - "&7Aún es un misterio..."
   Previous-page:
+    #Supports "CUSTOM_HEAD" or materials
     Material: "ARROW"
+    #Texture required if material is "CUSTOM_HEAD"
     Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzdhZWU5YTc1YmYwZGY3ODk3MTgzMDE1Y2NhMGIyYTdkNzU1YzYzMzg4ZmYwMTc1MmQ1ZjQ0MTlmYzY0NSJ9fX0="
-    Displayname: "&9Pagina anterior"
+    Displayname: "&9Página Anterior"
     Lore:
-    - "&7Ir a la pagina anterior."
+    - "&7Ir a una página anterior."
   Next-page:
+    #Supports "CUSTOM_HEAD" or materials
     Material: "ARROW"
+    #Texture required if material is "CUSTOM_HEAD"
     Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDZiYTYzMzQ0ZjQ5ZGQxYzRmNTQ4OGU5MjZiZjNkOWUyYjI5OTE2YTZjNTBkNjEwYmI0MGE1MjczZGM4YzgyIn19fQ=="
-    Displayname: "&9Next page"
+    Displayname: "&9Siguiente página"
     Lore:
-    - "&7Ir a la siguiente pagina."
+    - "&7Ir a la página siguiente."
 
+#Permissions required to access some commands.
+#Set to "none" if no permission is required. Admin permission is always required, even if "none"
 Permissions:
   Admin: "bettertalismans.admin"
+  #Permission to use /bettertalismans talismans
   Talismans: "none"
 
 Updates:
+  #Auto update configuration? Enabling will delete comments.
   Auto-update-configuration: true
+  #Check for updates? Recommended to keep it enabled.
   Check-updates: true
+  #Notify updates when player with permission joins the server?
   Notify-updates: true
+  #Permission required to receive update message.
   Permission: "bettertalismans.update"
-  Message: "&5&lD&d&lP &7>> &cUna nueva version encontrada estas usando: {CURRENT}. descarga la version {NEW} aqui &c{LINK}"
+  #Message to send when update is found.
+  Message: "&3[BetterTalismans] &eHay una nueva actualización, estas usando la versión {CURRENT}. Descarga la versión {NEW} aquí &c{LINK}"
