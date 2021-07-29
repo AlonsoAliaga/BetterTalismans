@@ -1,6 +1,35 @@
-# Traducción al español proporcionada por Gabriel A.
+##################################################################################
+#                    Traducción al español por FranMC23
+#      Esta traducción es proporcionada por un miembro de la comunidad. <3
+##################################################################################
+#
+# READ ALL COMMENTS BEFORE USING THE PLUGIN OR ASKING FOR HELP.
+#
+# You can create as many talismans as you want.
+# Keep in mind, some combinations are not allowed and talisman might not work properly.
+# Available modifiers:
+# HEALTH_BOOST - Integer - Each 1 is half heart.
+# MOVEMENT_SPEED - Double - Each 1 is additional 100% speed movement (0.5 is +50%, 0.75 is + 75%)
+# ATTACK_DAMAGE - Double - Each 1 is one half damage additional to the item.
+# KNOCKBACK_RESISTANCE - Double - Each 1 is additional 100% knockback resistance.
+#     IMPORTANT. From 1.8.8 - 1.15.x  KNOCKBACK_RESISTANCE is the probability to ignore knockback as a result of hit, explosion, etc. Do NOT USE high values, otherwise player will not have knockback
+#                However, in 1.16.x and probably newer versions too, it is a scale, not a probability. Do NOT USE high values, otherwise player will not have knockback.
+# Starting from version 1.9.2 (NOT 1.9, NOT 1.9.1)
+# ARMOR - Double - Each 1 is one armor point (full diamond set gives 20 armor points)
+# ARMOR_TOUGHNESS - Double - Each 1 is additional toughness point (toughness reduces penetration of high damage)
+# ATTACK_SPEED - Double - Each 1 is additional 100% attack speed (0.5 is +50%, 0.75 is + 75%)
+# LUCK - Double - Each 1 is additional 100% luck. This works for loot tables, more luck, better loot. It applies also with mob drops.
+
+# Available slots: MAIN_HAND,OFF_HAND,HEAD,CHEST,LEGS,FEET
+# SADLY THEY WORK ONLY IN 1.9 AND NEWER. THEY WON'T WORK IN 1.8 KEEP THAT IN MIND.
+
+#TEST ALL TALISMANS BEFORE ALLOWING PLAYERS TO CRAFT THEM TO MAKE SURE THEY WORK AS YOU WANT.
+#REMEMBER YOU CAN CREATE AS MANY TALISMANS AS YOU WANT. HOWEVER IF MODIFIERS ARE NOT AVAILABLE IN YOUR VERSION, THEY WONT WORK.
+#IF YOU USE INVALID MODIFIERS FOR YOUR VERSION IN A TALISMAN. IT WILL BE DISABLED AND ONLY TALISMAN WITH AT LEAST ONE VALID MODIFIER
+#WILL BE LOADED.
 Talismans:
-  tallisman-vida:
+  #Choose a name to be used internally. It must be unique.
+  Life-talisman:
     Item:
       #You can use any item you want, if you want a CUSTOM textured head. you need to use: "CUSTOM_HEAD" and specify a value in "Texture"
       #You can get textures from website https://minecraft-heads.com/custom-heads
@@ -17,16 +46,15 @@ Talismans:
       #This option adds custom model in case you wanna make a texture for it.
       #Set it to 0 to disable. This option is only available in 1.14 and newer, will not apply if Material is "CUSTOM_HEAD"
       CustomModelData: 0
-      Displayname: "&c&lTallisman de vida"
+      Displayname: "&c&lTalisman de Curación"
       Lore:
       # {ATTRIBUTES} will be replaced with ALL modifiers defined in "Modifiers" section.
       #You can always remove that placeholder and add your own lore.
       - "{ATTRIBUTES}"
       - " "
-      - "&7"
-      - "&7Talismán antiguo que da"
-      - "&7más salud para mantenerse"
-      - "&7luchando para derrotar a los enemigos."
+      - "&7Un viejo talisman que le dará al"
+      - "&7portador la habilidad de obtener más"
+      - "&7corazones cuando luchas con sus enemigos."
     #This is the list of modifiers. Keep in mind some modifiers are not compatible with others.
     Modifiers:
     # Follow the format: MODIFIER_NAME|AMOUNT
@@ -38,7 +66,7 @@ Talismans:
       #Should the talisman be craftable?
       Enabled: true
       #Title of the recipe inventory.
-      Title: "&c&lTallisman de vida"
+      Title: "&8Crafteo del Talisman"
       #Permission to craft this talisman. If removed or "none", then no permission will be required.
       #This permission is also used to show players recipes for talismans using /bettertalismans talismans
       #NOTE: This permission is NOT TO BE ABLE TO USE THE TALISMAN. All players can use all talismans if they have the item.
@@ -49,53 +77,54 @@ Talismans:
       - "EMERALD,MAGMA_CREAM,EMERALD"
       - "DIAMOND,DIAMOND_BLOCK,DIAMOND"
       - "EMERALD,MAGMA_CREAM,EMERALD"
-  talisman-rapidez:
+  Speed-talisman:
     Item:
       Material: "CLOCK"
       Glow: true
       Hide-attributes: true
       CustomModelData: 0
-      Displayname: "&9&lTalisman de rapidez"
+      Displayname: "&9&lTalisman de Velocidad"
       Lore:
       - "{ATTRIBUTES}"
       - " "
-      - "&7Talismán antiguo forjado con la"
+      - "&7Un viejo talisman forjado con la"
       - "&7sangre del dios más rápido."
     Modifiers:
     - "MOVEMENT_SPEED|0.20|MAIN_HAND,OFF_HAND"
     Recipe:
       Enabled: true
-      Title: "&8Talisman de rapidez crafteo"
+      Title: "&8Crafteo del Talisman"
       Recipe-permission: "none"
       Shape:
       - "EMERALD,CLOCK,EMERALD"
       - "DIAMOND,DIAMOND_BLOCK,DIAMOND"
       - "EMERALD,CLOCK,EMERALD"
-  talisman-velocista:
+  Speedster-helmet:
     Item:
       Material: "CUSTOM_HEAD"
       Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTU1Mzg1YTExYmJhMWRhNjJiODZhOTJiM2IyZjA2MThmM2E5NjU5NmZkYWE4OWM0Njg4OTcxYTYyMGJhIn19fQ=="
       Glow: true
       Hide-attributes: true
       CustomModelData: 0
-      Displayname: "&6&lCasco de velocista"
+      Displayname: "&6&lCabeza de Speedy"
       Lore:
       - "{ATTRIBUTES}"
       - " "
-      - "&7Casco antiguo que da"
-      - "&7La velocidad de un velocista"
-      - "&7Al que lo usa."
+      - "&7Una cabeza antigua encontrada"
+      - "&7en las ruinas de un lejano lugar"
+      - "&7que aumentará la velocidad de la"
+      - "&7persona que tenga el honor de portarla."
     Modifiers:
     - "MOVEMENT_SPEED|0.10|HEAD"
     Recipe:
       Enabled: true
-      Title: "&8Casco de velocista crafteo"
+      Title: "&8Crafteo de la Cabeza de Speedy"
       Recipe-permission: "none"
       Shape:
       - "EMERALD,DIAMOND_HELMET,EMERALD"
       - "DIAMOND,DIAMOND_BLOCK,DIAMOND"
       - "EMERALD,DIAMOND_HELMET,EMERALD"
-  talisman-golem:
+  Golem-talisman:
     Item:
       Material: "IRON_INGOT"
       Glow: true
@@ -105,20 +134,20 @@ Talismans:
       Lore:
       - "{ATTRIBUTES}"
       - " "
-      - "&7Talismán antiguo que da"
-      - "&7protección adicional a la"
-      - "&7persona que lo usa en la mano principal"
+      - "&7Un viejo talisman que te dará"
+      - "&7protección adicional a la persona"
+      - "&7que pueda portalo en su mano princinpal."
     Modifiers:
     - "ARMOR|10|MAIN_HAND"
     Recipe:
       Enabled: true
-      Title: "&8Talisman de Golem crafteo"
+      Title: "&8Crafteo del Talisman de Golem"
       Recipe-permission: "none"
       Shape:
       - "EMERALD,IRON_BLOCK,EMERALD"
       - "DIAMOND,DIAMOND_BLOCK,DIAMOND"
       - "EMERALD,IRON_BLOCK,EMERALD"
-  talisman-ataque:
+  Attack-talisman:
     Item:
       Material: "FEATHER"
       Glow: true
@@ -128,19 +157,19 @@ Talismans:
       Lore:
       - "{ATTRIBUTES}"
       - " "
-      - "&7Talismán antiguo forjado"
-      - "&7Por el antiguo samurai"
+      - "&7Un viejo talisman forjado por"
+      - "&7un samurai anciano."
     Modifiers:
     - "ATTACK_SPEED|3|MAIN_HAND,OFF_HAND"
     Recipe:
       Enabled: true
-      Title: "&8Talisman de Ataque crafeo"
+      Title: "&8Crafteo del Talisman de Ataque"
       Recipe-permission: "bettertalismans.recipe.attacktalisman"
       Shape:
       - "EMERALD,FEATHER,EMERALD"
       - "DIAMOND,DIAMOND_BLOCK,DIAMOND"
       - "EMERALD,FEATHER,EMERALD"
-  talisman-dios:
+  God-talisman:
     Item:
       Material: "NETHER_STAR"
       Glow: true
@@ -150,8 +179,8 @@ Talismans:
       Lore:
       - "{ATTRIBUTES}"
       - " "
-      - "&7Talismán antiguo forjado por dioses"
-      - "&7Para el guerrero más fuerte."
+      - "&7Un talisman viejo forjado por los dioses"
+      - "&7que realizaron las mejores guerras."
     Modifiers:
     - "HEALTH_BOOST|20|MAIN_HAND,OFF_HAND"
     - "ATTACK_SPEED|4|MAIN_HAND,OFF_HAND"
@@ -159,28 +188,28 @@ Talismans:
     - "ATTACK_DAMAGE|4|MAIN_HAND,OFF_HAND"
     Recipe:
       Enabled: true
-      Title: "&8Talisman de Dios crafteo"
+      Title: "&8Crafteo del Talisman de Dios"
       Recipe-permission: "bettertalismans.recipe.godtalisman"
       Shape:
       - "EMERALD_BLOCK,DIAMOND_BLOCK,EMERALD_BLOCK"
       - "DIAMOND_BLOCK,NETHER_STAR,DIAMOND_BLOCK"
       - "EMERALD_BLOCK,DIAMOND_BLOCK,EMERALD_BLOCK"
-  talisman-explorador:
+  Explorer-talisman:
     Item:
       Material: "SLIME_BALL"
       Glow: true
       Hide-attributes: true
       CustomModelData: 0
-      Displayname: "&e&lTalisman explorador"
+      Displayname: "&e&lTalisman del Explorador"
       Lore:
       - "{ATTRIBUTES}"
       - " "
-      - "&7Talismán antiguo creado para"
-      - "&7Exploradores para descubrir geniales"
-      - "&7Tesoros."
+      - "&7Un viejo talisman crafteado para los"
+      - "&7exploradores para descubrir"
+      - "&7increibles tesoros."
     Recipe:
       Enabled: true
-      Title: "&8Talisman explorador crafteo"
+      Title: "&8Crafteo del Talisman de Explorador"
       Recipe-permission: "none"
       Shape:
       - "EMERALD,SLIME_BALL,EMERALD"
@@ -188,140 +217,161 @@ Talismans:
       - "EMERALD,SLIME_BALL,EMERALD"
     Modifiers:
     - "LUCK|10|MAIN_HAND,OFF_HAND"
-  espada-ninja:
+  Ninja-sword:
     Item:
       Material: "DIAMOND_SWORD"
       Glow: true
       Hide-attributes: true
       CustomModelData: 0
-      Displayname: "&3&lEspada Ninja"
+      Displayname: "&3&lEspada del Ninja"
       Lore:
       - "{ATTRIBUTES}"
       - " "
-      - "&7Espada antigua creada para"
-      - "&7Los ninjas de gran nivel"
+      - "&7Una espada vieja creada por"
+      - "&7los ninjas de más alto nivel."
     Modifiers:
     - "HEALTH_BOOST|20|MAIN_HAND,OFF_HAND"
     - "ATTACK_SPEED|2|MAIN_HAND,OFF_HAND"
     - "ATTACK_DAMAGE|6|MAIN_HAND,OFF_HAND"
     Recipe:
       Enabled: true
-      Title: "&8Espada Ninja crafteo"
+      Title: "&8Crafteo de la Espada del Ninja"
       Recipe-permission: "bettertalismans.recipe.ninjasword"
       Shape:
       - "EMERALD,DIAMOND_SWORD,EMERALD"
       - "DIAMOND,DIAMOND_BLOCK,DIAMOND"
       - "EMERALD,DIAMOND_SWORD,EMERALD"
-  botas-velocista:
+  Speedster-boots:
     Item:
       Material: "DIAMOND_BOOTS"
       Glow: true
       Hide-attributes: true
       CustomModelData: 0
-      Displayname: "&6&lBotas de Velocista"
+      Displayname: "&6&lBotas de Speedy"
       Lore:
       - "{ATTRIBUTES}"
       - " "
-      - "&7Antiguas botas creadas para"
-      - "&7exploradores."
+      - "&7Unas botas muy viejas creadas"
+      - "&7para los exploradores."
     Modifiers:
     - "MOVEMENT_SPEED|0.20|FEET"
     - "ARMOR|4|CHEST"
     Recipe:
       Enabled: true
-      Title: "&8Botas velocista crafteo"
+      Title: "&8Crafteo de las Botas de Speedy"
       Recipe-permission: "bettertalismans.recipe.speedsterboots"
       Shape:
       - "EMERALD,DIAMOND_BOOTS,EMERALD"
       - "FEATHER,DIAMOND_BLOCK,FEATHER"
       - "EMERALD,DIAMOND_BOOTS,EMERALD"
-  pechera-tanque:
+  Tank-chestplate:
     Item:
       Material: "DIAMOND_CHESTPLATE"
       Glow: true
       Hide-attributes: true
       CustomModelData: 0
-      Displayname: "&f&lPechera de Tanque"
+      Displayname: "&f&lPeto de Tanque"
       Lore:
       - "{ATTRIBUTES}"
       - " "
-      - "&7Pechera antigua que da"
-      - "&7Al propietario protección extra"
-      - "&7Contra gran daño."
+      - "&7Un viejo peto que dará"
+      - "&7al portador mayor protección"
+      - "&7contra el daño."
     Modifiers:
     - "ARMOR_TOUGHNESS|5|CHEST"
     - "ARMOR|8|CHEST"
     Recipe:
       Enabled: true
-      Title: "&8Pechera de Tanque crafteo"
+      Title: "&8Crafteo del Peto de Tanque"
       Recipe-permission: "bettertalismans.recipe.tankchestplate"
       Shape:
       - "EMERALD,DIAMOND_CHESTPLATE,EMERALD"
       - "DIAMOND,DIAMOND_BLOCK,DIAMOND"
       - "EMERALD,DIAMOND_CHESTPLATE,EMERALD"
-  elytra-hierro:
+  Iron-armored-elytra:
     Item:
       Material: "ELYTRA"
       Glow: true
       Hide-attributes: false
       CustomModelData: 0
-      Displayname: "&e&lElytra de hierro"
+      Displayname: "&e&lElytra de Hierro"
       Lore:
-      - "&7Elytra reforzada que da"
-      - "&7Proteccion extra a jugadores"
-      - "&7Similar a la pechera de hierro."
+      - "&7Una elytra la cual está reforzada"
+      - "&7y le dará extra protección al"
+      - "&7usuario, similar a un peto de hierro."
     Modifiers:
     - "ARMOR|6|CHEST"
     Recipe:
       Enabled: true
-      Title: "&8Elytra de hierro crafteo"
+      Title: "&8Crafteo de la Elytra de Hierro"
       Recipe-permission: "bettertalismans.recipe.ironarmoredelytra"
       Shape:
       - "EMERALD,IRON_CHESTPLATE,EMERALD"
       - "DIAMOND,DIAMOND_BLOCK,DIAMOND"
       - "EMERALD,ELYTRA,EMERALD"
-  elytra-diamante:
+  Diamond-armored-elytra:
     Item:
       Material: "ELYTRA"
       Glow: true
       Hide-attributes: false
       CustomModelData: 0
-      Displayname: "&e&lElytra de diamante"
+      Displayname: "&e&lElytra de Diamante"
       Lore:
-      - "&7Elytra reforzada que da"
-      - "&7Proteccion extra a jugadores"
-      - "&7similar a la pechera de diamante."
+      - "&7Una elytra la cual está reforzada"
+      - "&7y le dará extra protección al"
+      - "&7usuario, similar a un peto de diamante."
     Modifiers:
     - "ARMOR|8|CHEST"
     - "ARMOR_TOUGHNESS|2|CHEST"
     Recipe:
       Enabled: true
-      Title: "&8Elytra de diamante crafteo"
+      Title: "&0Elytra de Diamante"
       Recipe-permission: "bettertalismans.recipe.diamondarmoredelytra"
       Shape:
       - "EMERALD,DIAMOND_CHESTPLATE,EMERALD"
       - "DIAMOND,DIAMOND_BLOCK,DIAMOND"
       - "EMERALD,ELYTRA,EMERALD"
-  elytra-netherite:
+  Netherite-armored-elytra:
     Item:
       Material: "ELYTRA"
       Glow: true
       Hide-attributes: false
       CustomModelData: 0
-      Displayname: "&e&lElytra de netherite"
+      Displayname: "&e&lNetherite Armored Elytra"
       Lore:
-      - "&7Elytra reforzada que da"
-      - "&7Proteccion extra a jugadores"
-      - "&7similar a la pechera de netherite."
+      - "&7Reinforced elytra that gives"
+      - "&7extra protection to player"
+      - "&7similar to netherite chestplate."
     Modifiers:
     - "ARMOR|8|CHEST"
     - "ARMOR_TOUGHNESS|3|CHEST"
     - "KNOCKBACK_RESISTANCE|0.1|CHEST"
     Recipe:
       Enabled: true
-      Title: "&8Elytra de netherite crafteo"
+      Title: "&8Elytra de Netherite"
       Recipe-permission: "bettertalismans.recipe.netheritearmoredelytra"
       Shape:
       - "EMERALD,NETHERITE_CHESTPLATE,EMERALD"
       - "DIAMOND,DIAMOND_BLOCK,DIAMOND"
       - "EMERALD,ELYTRA,EMERALD"
+#  Custom-talisman-identifier: #Make sure it's unique per talisman.
+#    Item:
+#      Material: "MATERIAL"
+#      Glow: true
+#      Hide-attributes: true
+#      CustomModelData: 0
+#      Displayname: "&f&lTalisman Name"
+#      Lore:
+#      - "{ATTRIBUTES}"
+#      - " "
+#      - "&7Description."
+#    Modifiers: #Modifiers
+#    - "HEALTH_BOOST|4|MAIN_HAND"
+#    Recipe:
+#      Enabled: true
+#      Title: "&8Custom Talisman recipe"
+#      Recipe-permission: "none"
+#      Shape:
+#      - "EMERALD,AIR,EMERALD"
+#      - "AIR,DIAMOND_BLOCK,AIR"
+#      - "EMERALD,AIR,EMERALD"
