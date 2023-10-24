@@ -32,16 +32,21 @@ Messages:
     - "&9 /bettertalismans test &f- &bGives you all talismans (OP only)"
     - "&9 /bettertalismans talismans <player> &f- &bOpen talismans GUI for player"
     - "&9 /bettertalismans give <player> <talisman> &f- &bGive talisman to player"
+    - "&9 /bettertalismans dropatlocation &f- &bDrop talisman in location"
+    - "&9 /bettertalismans dropatplayer &f- &bDrop talisman in target location"
     - "&9 /bettertalismans reload &f- &bReload configuration"
     Admin:
     - "&9 /bettertalismans talismans <player> &f- &bOpen talismans GUI for player"
     - "&9 /bettertalismans give <player> <talisman> &f- &bGive talisman to player"
+    - "&9 /bettertalismans dropatlocation &f- &bDrop talisman in location"
+    - "&9 /bettertalismans dropatplayer &f- &bDrop talisman in target location"
     - "&9 /bettertalismans reload &f- &bReload configuration"
     User:
     - "&9 /bettertalismans talismans &f- &bOpen talismans GUI"
 
 Lore:
   Health-boost: "&c+{AMOUNT} Hearts"
+  Max-absorption-boost: "&e+{AMOUNT} Max Yellow Hearts" #Not useful actually
   Speed-boost: "&b+{AMOUNT}% Speed"
   Armor-boost: "&f+{AMOUNT} Armor Points"
   Armor-toughness-boost: "&f+{AMOUNT} Armor Toughness"
@@ -65,6 +70,8 @@ Options:
   Talismans-gui-title: "&8Talismans GUI ({PAGE}/{MAX})"
   #Fill empty slots from the last row with empty frames?
   Fill-empty: true
+  #Fill empty slots for recipe gui?
+  Fill-recipe-empty: true
   #If enabled, this will allow players to discover all Talismans recipes.
   #This will allow players to view recipe directly from Recipe Book (Requires 1.13.2 or newer)
   Discover-recipes: true
@@ -75,9 +82,37 @@ Options:
   - "btalismans"
   - "btalisman"
   - "bettertalisman"
+  #These are the items which interaction is not cancelled (when used as talismans)
+  #By default all pvp related stuff is allowed for interaction.
+  Not-cancel-interaction-for-following-materials:
+  - "endsWith=_SWORD"
+  - "endsWith=_HOE"
+  - "endsWith=_AXE"
+  - "endsWith=_SHOVEL"
+  - "endsWith=_SPADE"
+  - "endsWith=_PICKAXE"
+  - "endsWith=_HELMET"
+  - "endsWith=_CHESTPLATE"
+  - "endsWith=_LEGGINGS"
+  - "endsWith=_BOOTS"
+  - "ELYTRA"
+  - "SHIELD"
+  - "BOW"
+  - "CROSSBOW"
+  - "TRIDENT"
+  - "FIREWORK_STAR"
+  - "FIREWORK"
+  - "FIREWORK_ROCKET"
+  - "endsWith=_POTION"
+  - "POTION"
 
 Items:
   Frame:
+    #Basic colors apply here.
+    Color: "BLACK"
+    #Custom model data in case you want. ONLY 1.14+
+    Custom-model-data: 0
+  Recipe-frame:
     #Basic colors apply here.
     Color: "BLACK"
     #Custom model data in case you want. ONLY 1.14+
@@ -104,6 +139,15 @@ Items:
     Displayname: "&9Next page"
     Lore:
     - "&7Move to next page."
+  Return-to-talismans:
+    #Set to -1 to disable.
+    Slot: 44
+    #Supports "CUSTOM_HEAD" or materials
+    Material: "ARROW"
+    #Texture required if material is "CUSTOM_HEAD"
+    Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODY0Zjc3OWE4ZTNmZmEyMzExNDNmYTY5Yjk2YjE0ZWUzNWMxNmQ2NjllMTljNzVmZDFhN2RhNGJmMzA2YyJ9fX0="
+    Displayname: "&cReturn to talismans."
+    Lore: []
 
 #Permissions required to access some commands.
 #Set to "none" if no permission is required. Admin permission is always required, even if "none"
